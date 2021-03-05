@@ -15,10 +15,10 @@
 
 -   ### `npm start`
 
-![app example](examples/app1.jpg)
-![app example](examples/app2.jpg)
+![app example](/examples/app1.jpg)
+![app example](/examples/app2.jpg)
 
-![app example](examples/app3.jpg)
+![app example](/examples/app3.jpg)
 
 [inquirer]: https://www.npmjs.com/package/inquirer
 [mapbox]: https://www.mapbox.com/
