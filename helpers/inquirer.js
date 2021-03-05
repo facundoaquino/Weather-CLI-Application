@@ -62,12 +62,12 @@ const readInput = async (message) => {
 	return desc
 }
 
-const taskToDelete = async (tasks = []) => {
-	const choices = tasks.map((task, inxd) => {
+const listPlaces = async (places = []) => {
+	const choices = places.map((place, inxd) => {
 		const inx = `${inxd + 1}`.blue
 		return {
-			value: task.id,
-			name: `${inx} ${task.description}`,
+			value: place.id,
+			name: `${inx} ${place.name}`,
 		}
 	})
 
@@ -80,7 +80,7 @@ const taskToDelete = async (tasks = []) => {
 		{
 			type: 'list',
 			name: 'id',
-			message: 'Delete',
+			message: 'Select place',
 			choices,
 		},
 	]
@@ -122,9 +122,9 @@ const showTasksCheckList = async (tasks = []) => {
 		},
 	]
 
-	const { ids } = await inquirer.prompt(question)
+	const { ids } = await inquirer.prompt(question) 
 
 	return ids
 }
 
-module.exports = { inquirerMenu, pause, readInput, taskToDelete, confirm, showTasksCheckList }
+module.exports = { inquirerMenu, pause, readInput, confirm,listPlaces, showTasksCheckList }
